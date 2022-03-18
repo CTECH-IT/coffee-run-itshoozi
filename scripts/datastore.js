@@ -1,5 +1,5 @@
 (function (window) {
-    let App = window.app || {};
+    let App = window.App || {};
 
     function DataStore() {
         this.data = {};
