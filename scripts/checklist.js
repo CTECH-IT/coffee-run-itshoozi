@@ -16,7 +16,7 @@
     checkList.prototype.removeRow = function(email) {
         this.$element
         .find('[value="' + email + '"]')
-        .closest('[data-coffee-order="checkbox]')
+        .closest('[data-coffee-order="checkbox"]')
         .remove();
     }
 
