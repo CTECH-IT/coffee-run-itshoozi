@@ -21,7 +21,7 @@
         <form data-coffee-order="form">
           <div class="form-group">
             <label for="coffeeOrder">Coffee Order</label>
-            <input required class="form-control shadow-none" name="coffee" id="coffeeOrder" autofocus placeholder="Coffee Order">
+            <input required pattern="[a-zA-Z\s]+" class="form-control shadow-none" name="coffee" id="coffeeOrder" autofocus placeholder="Coffee Order">
           </div>
           <div class="form-group">
             <label for="emailInput">Email</label>
@@ -44,7 +44,7 @@
           </div>
           <div class="form-group">
             <label for="flavorshot">Flavor Shot</label>
-            <select required id="flavorshot" class="form-control shadow-none" name="flavor">
+            <select id="flavorshot" class="form-control shadow-none" name="flavor">
               <option value="">None</option>
               <option value="carmel">Carmel</option>
               <option value="almond">Almond</option>
@@ -69,6 +69,7 @@
     </div>
   </section>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.4.1/jquery.min.js" charset="utf-8"></script>
+  <script src="scripts/validation.js" charset="utf-8"></script>
   <script src="scripts/checklist.js" charset="utf-8"></script>
   <script src="scripts/formhandler.js" charset="utf-8"></script>
   <script src="scripts/datastore.js" charset="utf-8"></script>
