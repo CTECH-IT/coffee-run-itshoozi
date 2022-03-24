@@ -3,15 +3,16 @@
 
     const FORM_SELECTOR = '[data-coffee-order="form"]';
     const CHECKLIST_SELECTOR = '[data-coffee-order="checklist"]';
+    const SERVER_URL = 'https://saturn.rochesterschools.org:8080/json';
     let App = window.App;
     let Truck = App.Truck;
-    let DataStore = App.DataStore;
+    let RemoteDataStore = App.RemoteDataStore;
     let FormHandler = App.FormHandler;
     let CheckList = App.checkList;
     let Validation = App.Validation;
 
-
-    let myTruck = new App.Truck('12345', new App.DataStore());
+    let remoteDS = new RemoteDataStore(SERVER_URL);
+    let myTruck = new App.Truck('12345',remoteDS);
     window.myTruck = myTruck;
     
     let formHandler = new FormHandler(FORM_SELECTOR);
